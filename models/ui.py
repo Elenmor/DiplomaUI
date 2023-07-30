@@ -58,7 +58,7 @@ class UIPage:
         browser.element(by.partial_text('Ваша корзина пуста')).should(be.visible)
 
     def press_heart(self):
-        browser.element('#bx_3966226736_711691_7e1b8e3524755c391129a9d7e6f2d206').click()
+        browser.element('.border_svg').click()
 
     def go_to_wishlist(self):
         browser.element('#favour_in').click()
@@ -67,3 +67,6 @@ class UIPage:
 
     def cheack_wishlist(self):
         browser.element(by.partial_text('Волкодав')).should(be.visible)
+
+    def go_to_book(self):
+        browser.element('a[href="/catalog/sovremennaya_rossiyskaya_literatura/volkodav_yu_maestro_m_ast_2021_352s_eto_lichnoe/"]').click()

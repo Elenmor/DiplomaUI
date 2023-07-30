@@ -99,6 +99,8 @@ def test_add_wishlist():
         uipage.open()
     with allure.step('Ищем книгу'):
         uipage.search_book('Волкодав')
+    with allure.step('Переходим на книгу'):
+        uipage.go_to_book()
     with allure.step('Нажимаем сердечко'):
         uipage.press_heart()
     with allure.step('Переходим в избранное'):
@@ -117,6 +119,8 @@ def test_add_cart_from_wishlist():
         uipage.open()
     with allure.step('Ищем книгу'):
         uipage.search_book('Волкодав')
+    with allure.step('Переходим на книгу'):
+        uipage.go_to_book()
     with allure.step('Нажимаем сердечко'):
         uipage.press_heart()
     with allure.step('Переходим в избранное'):
