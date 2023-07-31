@@ -1,5 +1,6 @@
-from selene import have, command, be, by
+from selene import have, be, by
 from selene.support.shared import browser
+
 
 class UIPage:
 
@@ -63,10 +64,9 @@ class UIPage:
     def go_to_wishlist(self):
         browser.element('#favour_in').click()
 
-
-
     def cheack_wishlist(self):
         browser.element(by.partial_text('Волкодав')).should(be.visible)
 
     def go_to_book(self):
-        browser.element('a[href="/catalog/sovremennaya_rossiyskaya_literatura/volkodav_yu_maestro_m_ast_2021_352s_eto_lichnoe/"]').click()
+        browser.element('a[href="/catalog/sovremennaya_rossiyskaya_literatura'
+                        '/volkodav_yu_maestro_m_ast_2021_352s_eto_lichnoe/"]').click()
