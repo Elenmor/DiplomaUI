@@ -24,6 +24,8 @@ def test_error_auth():
         uipage.login_submit()
     with allure.step('Проверяем наличие ошибки'):
         uipage.login_error()
+
+
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "Morilova")
@@ -38,6 +40,7 @@ def test_error_search():
     with allure.step('Проверяем наличие ошибки'):
         uipage.error_search()
 
+
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "Morilova")
@@ -47,8 +50,9 @@ def test_error_search():
 def test_search_book():
     with allure.step('Открываем главную страницу'):
         uipage.open()
-    with allure.step('Вводми название книги с строке поиска и проверяем ее наличие'):
+    with allure.step('Вводим название книги с строке поиска и проверяем ее наличие'):
         uipage.search_book('Мастер и Маргарита')
+
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
@@ -67,6 +71,7 @@ def test_add_to_cart():
         uipage.go_to_cart()
     with allure.step('Проверяем наличие книги в корзине'):
         uipage.cheack_cart()
+
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
@@ -88,6 +93,7 @@ def test_clear_cart():
     with allure.step('Проверяем, что корзина пуста'):
         uipage.empty_cart()
 
+
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "Morilova")
@@ -107,6 +113,7 @@ def test_add_wishlist():
         uipage.go_to_wishlist()
     with allure.step('Проверяем наличие книги в избранном'):
         uipage.cheack_wishlist()
+
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)

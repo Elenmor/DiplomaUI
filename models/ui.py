@@ -29,8 +29,6 @@ class UIPage:
             be.visible)
         return self
 
-    ##for search_test
-
     def searh_input(self, value):
         browser.element('#title-search-input').type(value).press_enter()
         return self
